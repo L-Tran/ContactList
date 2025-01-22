@@ -15,6 +15,7 @@ public class ContactList {
     // Run method
     public void run() {
         // Print instructions
+        System.out.println("Welcome to your Contacts List");
         printInstructions();
         // Get option
         Scanner s = new Scanner(System.in);
@@ -27,26 +28,26 @@ public class ContactList {
                 addContact();
             }
             // Printing contacts by first name
-            if (option == 2) {
+            else if (option == 2) {
                 sort(0);
                 printContacts();
             }
             // Printing contacts by last name
-            if (option == 3) {
+            else if (option == 3) {
                 sort(1);
                 printContacts();
             }
             // Printing contacts by number
-            if (option == 4) {
+            else if (option == 4) {
                 sort(2);
                 printContacts();
             }
             // Printing students only
-            if (option == 5) {
+            else if (option == 5) {
                 listStudents();
             }
             // Searching by first name + printing person
-            if (option == 6) {
+            else if (option == 6) {
                 // Ask for name
                 System.out.println("Enter first name:");
                 s.nextLine();
@@ -61,7 +62,7 @@ public class ContactList {
 
             }
             // Searching by last name + printing person
-            if (option == 7) {
+            else if (option == 7) {
                 // Ask for name
                 System.out.println("Enter last name:");
                 s.nextLine();
@@ -75,7 +76,7 @@ public class ContactList {
                 }
             }
             // Searching by phone number + printing person
-            if (option == 8) {
+            else if (option == 8) {
                 // Ask for number
                 System.out.println("Enter phone number:");
                 s.nextLine();
@@ -88,14 +89,14 @@ public class ContactList {
                     System.out.println(searchByPhoneNumber(n));
                 }
             }
-
+            // Reprint Instructions
+            printInstructions();
         }
     }
 
     // Print instructions
     public void printInstructions() {
-        System.out.println("Welcome to your Contacts List\n" +
-                "Please pick from the following menu options\n" +
+        System.out.println("Please pick from the following menu options\n" +
                 "Menu:\n" +
                 "1. Add Contact\n" +
                 "2. List All Contacts By First Name\n" +
